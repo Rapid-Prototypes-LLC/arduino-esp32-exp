@@ -85,6 +85,8 @@ endif()
 set(ARDUINO_ALL_LIBRARIES
   ArduinoOTA
   AsyncUDP
+  BLE
+  BluetoothSerial
   DNSServer
   EEPROM
   ESPmDNS
@@ -97,10 +99,12 @@ set(ARDUINO_ALL_LIBRARIES
   LittleFS
   NetBIOS
   Network
+  NetworkClientSecure
   PPP
   Preferences
   SD_MMC
   SD
+  SimpleBLE
   SPI
   Ticker
   Update
@@ -216,6 +220,51 @@ set(ARDUINO_LIBRARY_WiFi_SRCS
   libraries/WiFi/src/AP.cpp)
 
 set(ARDUINO_LIBRARY_Wire_SRCS libraries/Wire/src/Wire.cpp)
+
+set(ARDUINO_LIBRARY_BluetoothSerial_SRCS
+  libraries/BluetoothSerial/src/BluetoothSerial.cpp
+  libraries/BluetoothSerial/src/BTAddress.cpp
+  libraries/BluetoothSerial/src/BTAdvertisedDeviceSet.cpp
+  libraries/BluetoothSerial/src/BTScanResultsSet.cpp)
+
+set(ARDUINO_LIBRARY_SimpleBLE_SRCS libraries/SimpleBLE/src/SimpleBLE.cpp)
+
+set(ARDUINO_LIBRARY_NetworkClientSecure_SRCS
+  libraries/NetworkClientSecure/src/ssl_client.cpp
+  libraries/NetworkClientSecure/src/NetworkClientSecure.cpp)
+
+set(ARDUINO_LIBRARY_BLE_SRCS
+  libraries/BLE/src/BLE2901.cpp
+  libraries/BLE/src/BLE2902.cpp
+  libraries/BLE/src/BLE2904.cpp
+  libraries/BLE/src/BLEAddress.cpp
+  libraries/BLE/src/BLEAdvertisedDevice.cpp
+  libraries/BLE/src/BLEAdvertising.cpp
+  libraries/BLE/src/BLEBeacon.cpp
+  libraries/BLE/src/BLECharacteristic.cpp
+  libraries/BLE/src/BLECharacteristicMap.cpp
+  libraries/BLE/src/BLEClient.cpp
+  libraries/BLE/src/BLEDescriptor.cpp
+  libraries/BLE/src/BLEDescriptorMap.cpp
+  libraries/BLE/src/BLEDevice.cpp
+  libraries/BLE/src/BLEEddystoneTLM.cpp
+  libraries/BLE/src/BLEEddystoneURL.cpp
+  libraries/BLE/src/BLEExceptions.cpp
+  libraries/BLE/src/BLEHIDDevice.cpp
+  libraries/BLE/src/BLERemoteCharacteristic.cpp
+  libraries/BLE/src/BLERemoteDescriptor.cpp
+  libraries/BLE/src/BLERemoteService.cpp
+  libraries/BLE/src/BLEScan.cpp
+  libraries/BLE/src/BLESecurity.cpp
+  libraries/BLE/src/BLEServer.cpp
+  libraries/BLE/src/BLEService.cpp
+  libraries/BLE/src/BLEServiceMap.cpp
+  libraries/BLE/src/BLEUtils.cpp
+  libraries/BLE/src/BLEUUID.cpp
+  libraries/BLE/src/BLEValue.cpp
+  libraries/BLE/src/FreeRTOS.cpp
+  libraries/BLE/src/GeneralUtils.cpp
+  )
 
 set(ARDUINO_LIBRARIES_SRCS)
 set(ARDUINO_LIBRARIES_REQUIRES)

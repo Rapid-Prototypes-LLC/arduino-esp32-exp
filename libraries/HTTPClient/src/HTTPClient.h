@@ -31,10 +31,6 @@
 #define HTTPCLIENT_1_1_COMPATIBLE
 #endif
 
-#ifndef HTTPCLIENT_NOSECURE
-#define HTTPCLIENT_NOSECURE
-#endif
-
 #include <memory>
 #include <Arduino.h>
 #include <NetworkClient.h>
